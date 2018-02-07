@@ -19,4 +19,14 @@ class Rps
       true
     end
   end
+  def scissors_loses?(input1, input2)
+    if (input1 == "scissors"||input1 == "rock") && (input2 == "rock"||input2 == "scissors")
+      true
+    end
+  end
+  def paper_loses?(input1, input2)
+    if (input1 == "scissors"||input1 == "paper") && (input2 == "paper"||input2 == "scissors")
+      true
+    end
+  end
 end
