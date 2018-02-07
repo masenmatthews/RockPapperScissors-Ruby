@@ -1,5 +1,10 @@
+puts 'choose your weapon'
+input1 = gets.chomp
+puts 'choose weapon 2'
+input2 = gets.chomp
+
 class Rps
-  def wins?(input1, input2)
+  def wins(input1, input2)
     if (input1 == "rock"||input1 == "scissors") && (input2 == "scissors"||input2 == "rock")
       "rock wins"
     elsif (input1 == "scissors"||input1 == "paper") && (input2 == "paper"||input2 == "scissors")
@@ -9,10 +14,9 @@ class Rps
     else
       "it's a tie!"
     end
-    puts 'wins?()'
   end
 
-  def loses?(input1, input2)
+  def loses(input1, input2)
     if (input1 == "rock"||input1 == "paper") && (input2 == "paper"||input2 == "rock")
       "rock loses"
     elsif (input1 == "scissors"||input1 == "rock") && (input2 == "rock"||input2 == "scissors")
@@ -22,11 +26,9 @@ class Rps
     else
       "it's a tie"
     end
-     puts 'loses?()'
   end
-
-  puts 'choose your weapon'
-  input1 = gets.chomp
-  puts 'choose weapon 2'
-  input2 = gets.chomp
 end
+
+game = Rps.new()
+puts game.wins(input1, input2)
+puts game.loses(input1, input2)
