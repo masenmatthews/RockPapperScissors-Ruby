@@ -15,4 +15,8 @@ describe('#rps') do
     game = Rps.new()
     expect(game.paper_wins?("rock", "paper")).to(eq(true))
   end
+  it("returns true if rock and paper are entered as inputs and rock loses") do
+    game = Rps.new()
+    expect(game.rock_loses?("rock", "paper")).to(eq(true))
+  end
 end

@@ -14,4 +14,9 @@ class Rps
       true
     end
   end
+  def rock_loses?(input1, input2)
+    if (input1 == "rock"||input1 == "paper") && (input2 == "paper"||input2 == "rock")
+      true
+    end
+  end
 end
